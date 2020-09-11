@@ -1,20 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+      <ion-title>
+              <ion-icon name="beer-sharp"></ion-icon>
+             Angular LMS
+      </ion-title>
+      <ion-buttons slot="primary">
+          <ion-button *ngIf="loggedIn">
+              <ion-icon slot="start" name="lock-closed"></ion-icon>
+              <span>Logout </span>
+          </ion-button>
+          <ion-button *ngIf="!loggedIn">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <span>Login</span>
+          </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="medium">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <h1>Angular LMS</h1>
   </div>
 </ion-content>
+
+<footer class="">
+  <ion-row>
+      <ion-col center class="ion-text-center">
+          <button>
+              <ion-icon name="eye-off-outline"></ion-icon>
+              <div>All Rights Reserved</div>
+          </button>
+      </ion-col>
+      <ion-col center class="ion-text-center">
+          <button>
+              <ion-icon name="copy-outline"></ion-icon>
+              <div>Copyright, 2020</div>
+          </button>
+      </ion-col>
+      <ion-col center class="ion-text-center">
+          <button>
+              <ion-icon name="time-outline"></ion-icon>
+              <div>Kingsley Tagbo</div>
+          </button>
+      </ion-col>
+  </ion-row>
+</footer>
