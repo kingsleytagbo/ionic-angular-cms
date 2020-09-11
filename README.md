@@ -1,5 +1,4 @@
-# ionic-angular-cms
-Angular Version 10
+# Build Cross-Platform Apps in Ionic Angular Content Management System (CMS) - Angular Version 10
 
 ### Pages
 #### Home Page
