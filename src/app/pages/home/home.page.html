@@ -29,6 +29,12 @@
 
   <div id="container">
       <h1>Cross-Platform Ionic Angular Content Management System (CMS)</h1>
+    <ion-list>
+        <ion-item *ngFor="let feature of features">
+            <ion-label>{{feature.val}}</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]="feature.isChecked"></ion-checkbox>
+        </ion-item>
+    </ion-list>
       <h3>Angular Version 10</h3>
   </div>
 </ion-content>
