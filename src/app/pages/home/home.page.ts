@@ -10,14 +10,14 @@ export class HomePage {
   constructor() {}
 
   public features = [
-    { val: 'Components', isChecked: true },
-    { val: 'Authentication', isChecked: false },
-    { val: 'Data Access', isChecked: false },
-    { val: 'Filtering', isChecked: false },
-    { val: 'Searching', isChecked: false },
-    { val: 'Sorting', isChecked: false },
-    { val: 'User Management', isChecked: false },
-    { val: 'Roles & Permissions Management', isChecked: false },
+    { val: 'Components', isChecked: true ,color:'success' },
+    { val: 'Authentication', isChecked: false ,color:'info' },
+    { val: 'Data Access', isChecked: false ,color:'info' },
+    { val: 'Filtering', isChecked: false ,color:'secondary' },
+    { val: 'Searching', isChecked: false ,color:'secondary' },
+    { val: 'Sorting', isChecked: false ,color:'dark' },
+    { val: 'User Management', isChecked: false ,color:'dark' },
+    { val: 'Roles & Permissions Management', isChecked: false ,color:'dark' },
   ];
 
 }
