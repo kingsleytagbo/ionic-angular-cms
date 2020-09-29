@@ -15,9 +15,12 @@ export class Header implements OnInit{
   ngOnInit(){}
 
   public async login(){
-    await this.utility.showToast('Error', 'Login not implemented', {position:'top'}).then(toast =>{
+    await this.utility.showToast(
+      'Error', 
+      'Login not implemented', 
+    {position:'top', duration:10000, showCloseButton:true, closeButtonText:'OK', color:'danger'}).then(toast =>{
       toast.present();
-    })
+    });
   }
 
 }
