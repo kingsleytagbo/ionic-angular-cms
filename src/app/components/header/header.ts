@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { UtilityProvider } from 'src/app/providers/UtilityProvider'
 
 @Component({
   selector: 'page-header',
@@ -10,6 +10,14 @@ import { AlertController } from '@ionic/angular';
 export class Header implements OnInit{
   public loggedIn = false;
 
+  constructor(private utility : UtilityProvider){}
+
   ngOnInit(){}
+
+  public async login(){
+    await this.utility.showToast('Error', 'Login not implemented', {position:'top'}).then(toast =>{
+      toast.present();
+    })
+  }
 
 }
