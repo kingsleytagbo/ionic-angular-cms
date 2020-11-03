@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-import { User } from './user';
+import {EditUser } from './edituser';
 
 @NgModule({
     imports: [
@@ -12,13 +12,13 @@ import { User } from './user';
         IonicModule
     ],
     exports: [
-        User
+        EditUser
     ],
     declarations: [
-       User
+       EditUser
     ],
     entryComponents: [],
     bootstrap: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class UserModule { }
+export class EditUserModule { }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import User  from '../../models/User';
+import { ApiProvider } from '../../services/http';
 
 @Component({
   selector: 'users-home',
@@ -7,7 +9,14 @@ import { Component } from '@angular/core';
 })
 export class UsersPage {
  public loggedIn = false;
-  constructor() {}
+ public users: Array<User> = [];
+
+  constructor( UsersProvider:ApiProvider) {
+    UsersProvider.getUsers().then((data) =>{
+      this.users = data;
+      console.log({users: data});
+    });
+  }
 
   public features = [
     { val: 'Components', isChecked: true ,color:'success' },

@@ -6,6 +6,7 @@ import { UsersPage } from './users.page';
 import { HeaderModule } from '../../components/header/header.module';
 import { FooterModule } from '../../components/footer/footer.module';
 import { UsersPageRoutingModule } from './users-routing.module';
+import { EditUserModule } from '../../components/users/edituser.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { UsersPageRoutingModule } from './users-routing.module';
     IonicModule,
     HeaderModule,
     FooterModule,
+    EditUserModule,
     UsersPageRoutingModule
   ],
   declarations: [UsersPage]

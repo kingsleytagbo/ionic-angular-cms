@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-
 @Component({
   selector: 'page-edituser',
   templateUrl: 'edituser.html',
@@ -8,6 +7,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class EditUser{
 
-  constructor( ) { }
+  constructor( ) { 
+
+  }
 
 }
