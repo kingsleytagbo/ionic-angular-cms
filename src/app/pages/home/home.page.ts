@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import User  from '../../models/User';
+import { ApiProvider } from '../../services/http';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +10,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
  public loggedIn = false;
-  constructor() {}
+
+ constructor( 
+   private router: Router) {
+ }
+
+ addUserButton() {
+   this.router.navigate(['users']);
+ }
 
   public features = [
     { val: 'Components', isChecked: true ,color:'success' },

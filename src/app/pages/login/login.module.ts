@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-import { UsersPage } from './users.page';
-import { UsersPageRoutingModule } from './users-routing.module';
+import { LoginPage } from './login';
+import { LoginPageRoutingModule } from './login-routing.module';
 
 import { FooterModule } from '../../components/footer/footer.module';
 import { HeaderModule } from '../../components/header/header.module';
@@ -14,12 +14,12 @@ import { HeaderModule } from '../../components/header/header.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    UsersPageRoutingModule,
+    LoginPageRoutingModule,
     FooterModule,
     HeaderModule
   ],
   declarations: [
-    UsersPage,
+    LoginPage,
   ]
 })
-export class UsersPageModule { }
+export class LoginModule { }

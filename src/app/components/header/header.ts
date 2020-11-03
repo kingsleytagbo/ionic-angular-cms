@@ -10,17 +10,16 @@ import { UtilityProvider } from 'src/app/providers/UtilityProvider'
 export class Header implements OnInit{
   public loggedIn = false;
 
-  constructor(private utility : UtilityProvider){}
+  constructor(private utility : UtilityProvider, private router:Router){}
 
   ngOnInit(){}
 
-  public async login(){
-    await this.utility.showToast(
-      'Error', 
-      'Login not implemented', 
-    {position:'top', duration:10000, showCloseButton:true, closeButtonText:'OK', color:'danger'}).then(toast =>{
-      toast.present();
-    });
+  public async navigateToLogin(){
+    return this.router.navigateByUrl('login');
+  }
+
+  public async navigateToHome(){
+    return this.router.navigateByUrl('home');
   }
 
 }
