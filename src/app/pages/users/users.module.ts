@@ -8,6 +8,8 @@ import { UsersPageRoutingModule } from './users-routing.module';
 
 import { FooterModule } from '../../components/footer/footer.module';
 import { HeaderModule } from '../../components/header/header.module';
+import { EditUserModule } from '../../components/users/edituser.module';
+
 
 @NgModule({
   imports: [
@@ -16,7 +18,8 @@ import { HeaderModule } from '../../components/header/header.module';
     IonicModule,
     UsersPageRoutingModule,
     FooterModule,
-    HeaderModule
+    HeaderModule,
+    EditUserModule
   ],
   declarations: [
     UsersPage,

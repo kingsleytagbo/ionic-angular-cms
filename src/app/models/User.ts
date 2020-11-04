@@ -12,7 +12,7 @@ export default class User{
     public user_activation_key : string;
     public spam : number;
     public deleted : number;
-    public site_id : number;
+    public site_id : number = 1;
     
 
     constructor(username: string, password:string){

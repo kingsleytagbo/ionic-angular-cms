@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import User from '../models/User';
 
 @Injectable({
@@ -37,28 +36,32 @@ export class ApiProvider {
         }
     };
 
-    public createUser = (email: string, password: string, useApi: boolean = true) => {
-        console.log({ 'Login': { email: email, password: password, useApi: useApi } });
+    public createUser = (user: User, useApi: boolean = true) => {
         if (useApi) {
-            if ((email && email !== '') && (password && password !== '')) {
-                const body = {
-                    "user": {
-                        user_login: email, user_pass: password, user_nicename: password, user_email: email, display_name: email,
-                        user_status: 1, user_registered: 1, user_url: '', user_activation_key: '', spam: 0,
-                        deleted: 0, site_id: 1
-                    }
-                };
-                return this.post('/users/createUser', body);
-                //return mockSuccess({ auth_token: 'Login Api - Success!' });
+            const body = {
+                "user": user
             }
-            else {
-                return this.mockFailure({ error: 500, message: 'Login Api - Failure' });
-            }
+            return this.post('/users/createUser', body);
+
         }
         else {
             return this.mockFailure({ error: 500, message: 'Login - Failure' });
         }
     };
+
+    public updateUser = (user: User, useApi: boolean = true) => {
+        if (useApi) {
+          const body = {
+            "user": {
+              user
+            }
+          };
+          return this.post('/users/updateUser', body);
+        }
+        else {
+          return this.mockFailure({ error: 500, message: 'updateUser - Failure' });
+        }
+      };
 
     public mockSuccess = (value: any) => {
         return new Promise((resolve) => {

@@ -1,22 +1,40 @@
-<footer class="">
-    <ion-row>
-        <ion-col center class="ion-text-center">
-            <button>
-                <ion-icon name="logo-angular"></ion-icon>
-                <div>Angular 10.x</div>
-            </button>
-        </ion-col>
-        <ion-col center class="ion-text-center">
-            <button>
-                <ion-icon name="copy-outline"></ion-icon>
-                <div>Copyright, 2020</div>
-            </button>
-        </ion-col>
-        <ion-col center class="ion-text-center">
-            <button>
-                <ion-icon name="time-outline"></ion-icon>
-                <div>Kingsley Tagbo</div>
-            </button>
-        </ion-col>
-    </ion-row>
-</footer>
+          <!-- BEGIN ITEMS GRID -->
+          <ion-row>
+                <ion-col size-xs="12" class="padding page-content">
+                  <form #loginForm="ngForm" novalidate>
+                    <ion-list>
+                      <ion-item>
+                        <ion-label position="stacked" color="primary">user_nicename</ion-label>
+                        <ion-input  name="user_nicename" type="text" spellcheck="false" autocapitalize="off"
+                          required>
+                        </ion-input>
+                      </ion-item>
+
+    
+                      <ion-item>
+                        <ion-label position="stacked" color="primary">Password</ion-label>
+                        <ion-input  name="password" type="password"  required>
+                        </ion-input>
+                      </ion-item>
+    
+                    </ion-list>
+    
+                    <ion-row>
+                      <ion-col>
+                        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Login</ion-button>
+                      </ion-col>
+                      <ion-col>
+                        <ion-button (click)="onSignup()" color="light" expand="block">Signup</ion-button>
+                      </ion-col>
+                    </ion-row>
+                  </form>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="!isValid">
+                <ion-col size-xs="12">
+                  <div class="alert alert-danger" role="alert">
+                    Your user_nicename or password is invalid!
+                  </div>
+                </ion-col>
+              </ion-row>
+              <!-- END ITEMS GRID -->

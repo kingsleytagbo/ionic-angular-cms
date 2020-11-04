@@ -1,0 +1,72 @@
+<page-header></page-header>
+
+<ion-content color="medium">
+
+  <ion-row class="ion-margin-top">
+    <ion-col size-xs="1" size-sm="2" size-md="3"></ion-col>
+    <ion-col size-xs="10" size-sm="8" size-md="6">
+
+      <ion-card class="ion-margin-top">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-row>
+              <ion-col size-xs="12">
+                <h1 class="ion-text-capitalize ion-text-center">
+                  <ion-icon name="apps"></ion-icon>
+                  Manage User
+                </h1>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-col size-xs="12" class="padding page-content">
+            <form #userForm="ngForm" novalidate>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label position="stacked" color="primary">user_login</ion-label>
+                  <ion-input [(ngModel)]="user.user_login" name="user_login" type="text" spellcheck="false" autocapitalize="off" required>
+                  </ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="stacked" color="primary">user_nicename</ion-label>
+                  <ion-input [(ngModel)]="user.user_nicename" name="user_nicename" type="text" spellcheck="false" autocapitalize="off" required>
+                  </ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="stacked" color="primary">user_email</ion-label>
+                  <ion-input [(ngModel)]="user.user_email" name="user_email" type="text" spellcheck="false" autocapitalize="off" required>
+                  </ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="stacked" color="primary">user_password</ion-label>
+                  <ion-input [(ngModel)]="user.user_pass" name="user_pass" type="password" required>
+                  </ion-input>
+                </ion-item>
+
+              </ion-list>
+
+              <ion-row>
+                <ion-col size="6">
+                  <ion-button (click)="save(userForm)" type="submit" expand="block">Save</ion-button>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button (click)="cancel()" color="light" expand="block">Cancel</ion-button>
+                </ion-col>
+              </ion-row>
+            </form>
+          </ion-col>
+        </ion-card-content>
+
+        <!-- END ITEMS GRID -->
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<page-footer></page-footer>

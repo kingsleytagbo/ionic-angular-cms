@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import User from 'src/app/models/User';
 
 @Component({
   selector: 'page-edituser',
@@ -6,9 +7,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['edituser.scss'],
 })
 export class EditUser{
-
+  @Input('user') user: User;
+  isValid = true;
   constructor( ) { 
-
+    this.user = new User('', '');
   }
 
 }

@@ -15,6 +15,9 @@ import { ApiProvider } from '../../services/http';
 })
 export class UsersPage {
   public loggedIn = false;
+  public editMode = false;
+  public addMode = false;
+  public currentUser:User;
   public users: Array<User> = [];
 
   constructor( 
@@ -26,9 +29,15 @@ export class UsersPage {
     });
   }
  
-  addUserButton() {
-    console.log({users: this.router})
-    this.router.navigate(['users']);
+  public async navigateToAddUser(){
+    this.router.navigate(['users/user'], {state: {}});
+  } 
+
+  public async editUser(user:any){
+    this.currentUser = user;
+    this.editMode = true;
+    //console.log({user: this});
+    this.router.navigate(['users/user'], {state: {user: user}});
   } 
 
   ionViewWillEnter() {
