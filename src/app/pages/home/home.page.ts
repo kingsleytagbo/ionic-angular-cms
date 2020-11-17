@@ -20,14 +20,14 @@ export class HomePage {
  }
 
   public features = [
-    { val: 'Components', isChecked: true ,color:'success' },
-    { val: 'Authentication', isChecked: false ,color:'info' },
     { val: 'Data Access', isChecked: false ,color:'info' },
     { val: 'Filtering', isChecked: false ,color:'secondary' },
+    { val: 'Components', isChecked: true ,color:'success' },
     { val: 'Searching', isChecked: false ,color:'secondary' },
     { val: 'Sorting', isChecked: false ,color:'dark' },
-    { val: 'User Management', isChecked: false ,color:'dark' },
-    { val: 'Roles & Permissions Management', isChecked: false ,color:'dark' },
+    { val: 'Authentication', isChecked: false ,color:'info' },
+    { val: 'User Management', isChecked: false ,color:'warning' },
+    { val: 'Roles & Permissions', isChecked: false ,color:'danger' },
   ];
 
 }

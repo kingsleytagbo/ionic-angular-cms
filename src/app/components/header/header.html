@@ -2,11 +2,11 @@
     <ion-toolbar>
         <ion-title>
             <ion-button (click)="navigateToHome()">
-                <ion-icon slot="start" name="beer-sharp"></ion-icon>
-                <span>Angular UI Dev Kit</span>
+                <ion-icon slot="end" name="beer-sharp"></ion-icon>
+                <span>Home</span>
             </ion-button>
         </ion-title>
-        <ion-buttons slot="primary">
+        <ion-buttons slot="end" color="secondary">
             <ion-button *ngIf="loggedIn">
                 <ion-icon slot="start" name="lock-closed"></ion-icon>
                 <span>Logout </span>
